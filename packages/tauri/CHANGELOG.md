@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.5](https://github.com/capacitor-community/tauri/compare/v1.0.0-alpha.4...v1.0.0-alpha.5) (2021-08-10)
+
+**Note:** Version bump only for package @capacitor-community/tauri
+
+
+
+
+
 # [1.0.0-alpha.4](https://github.com/capacitor-community/tauri/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2021-08-10)
 
 **Note:** Version bump only for package @capacitor-community/tauri
