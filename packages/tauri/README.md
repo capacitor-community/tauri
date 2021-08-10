@@ -32,6 +32,9 @@ Bring your Capacitor ⚡ apps to the desktop with Tauri! 🖥
 5. `npx cap open @capacitor-community/tauri`
 6. You now have your web app running in tauri, right click and select `inspect` to bring up dev tools. 
 
+## 🎉 More Info
+- Check out Tauri on its [website](https://tauri.studio/) or on [github](https://github.com/tauri-apps/tauri)
+
 ## 🛠 Maintainers 
 
 | Maintainer       | GitHub                                  | Social                                    | Sponsoring Company | Primary |
