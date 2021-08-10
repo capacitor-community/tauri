@@ -23,7 +23,7 @@ async function doCopyTask() {
 }
 
 async function doOpenTask() {
-  return await runTask('Opening Tauri platform', async () => {
+  return await runTask('Opening Tauri platform - The first run of this command can take several minutes to show the app.', async () => {
     return await doOpen();
   });
 }
