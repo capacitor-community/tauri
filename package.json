@@ -2,6 +2,7 @@
   "name": "capacitor-tauri-platform",
   "private": true,
   "scripts": {
+    "prepublish": "npm run build-all",
     "publish:latest": "env-cmd lerna publish --conventional-commits -create-release github --force-publish",
     "publish:next-prerelease": "env-cmd lerna publish prerelease --preid alpha --dist-tag alpha --pre-dist-tag alpha --conventional-commits --create-release github --force-publish",
     "publish:next": "env-cmd lerna publish --preid next --dist-tag next --pre-dist-tag next --conventional-commits --create-release github --force-publish",

@@ -41,6 +41,8 @@ async function doOpenTask() {
         // await doCopyTask();
         // break;
       case 'run':
+        await doOpenTask();
+        break;
       case 'open':
         await doOpenTask();
         break;
