@@ -25,7 +25,7 @@ Bring your Capacitor ⚡ apps to the desktop with Tauri! 🖥
 
 ## ⏳ Quickstart (super bare bones for now as the platform is just in alpha)
 0. Create or open a Capacitor initialized web app project. [CAPACITOR DOCS](https://capacitorjs.com/docs)
-1. `npm i @capacitor-community/tauri`
+1. `npm i @capacitor-community/tauri@alpha`
 2. `npx cap add @capacitor-community/tauri`
 3. Edit `APP_ROOT/tauri/src-tauri/tauri.conf.json -> build.devPath` to contain the url of you web app when running in dev mode. For example react app runs on `http://localhost:3000`.
 4. Make sure your web app is running. For example, `npm run start` from the `APP_ROOT`
