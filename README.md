@@ -32,7 +32,7 @@ Bring your Capacitor ⚡ apps to the desktop with Tauri! 🖥
 1. Build your web app (`npm run build` for example)
 2. `npm i @capacitor-community/tauri@alpha`
 3. `npx cap add @capacitor-community/tauri`
-4. `npx cap open @capacitor-community/tauri`
+4. `npx cap open @capacitor-community/tauri` - _This can take several minutes the first time you run it._
 5. You now have your web app running in tauri, right click and select `inspect` to bring up dev tools. 
 
 ## 🎉 More Info
