@@ -3,9 +3,10 @@
   "private": true,
   "scripts": {
     "publish:latest": "env-cmd lerna publish --conventional-commits -create-release github --force-publish",
-    "publish:next-prerelease": "env-cmd lerna publish prerelease --preid next --dist-tag next --pre-dist-tag next --conventional-commits --create-release github --force-publish",
+    "publish:next-prerelease": "env-cmd lerna publish prerelease --preid alpha --dist-tag alpha --pre-dist-tag alpha --conventional-commits --create-release github --force-publish",
     "publish:next": "env-cmd lerna publish --preid next --dist-tag next --pre-dist-tag next --conventional-commits --create-release github --force-publish",
-    "build-all": "lerna run build"
+    "build-all": "lerna run build",
+    "env-cmd": "env-cmd"
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",
