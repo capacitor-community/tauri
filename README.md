@@ -1,5 +1,7 @@
-# 🚨 The platform is just into alpha so not everything will "just work" 🚨
-
+<h1 align="center">
+🚨 This platform is in alpha, expect broken parts.  🚨
+</h1>
+  
 <p align="center">
   <img src="https://user-images.githubusercontent.com/20338451/128799226-dc84c780-a031-4899-9880-3c9df4c2c52b.png" width="560" /><br />
 </p>
