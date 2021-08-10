@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
 /* eslint-disable @typescript-eslint/no-var-requires */
 const esbuild = require('esbuild');
-const {readdirSync} = require('fs');
-const {join} = require('path');
+const { readdirSync } = require('fs');
+const { join } = require('path');
 const tar = require('tar');
 
 async function packTemplate() {
@@ -12,7 +12,10 @@ async function packTemplate() {
   readdirSync(templateSrc).forEach(file => {
     files.push(file);
   });
-  await tar.create({ gzip: true, file: destTemplateFilePath, cwd: templateSrc }, files);
+  await tar.create(
+    { gzip: true, file: destTemplateFilePath, cwd: templateSrc },
+    files,
+  );
   console.log(`Packed ${destTemplateFilePath}!`);
 }
 
@@ -33,7 +36,7 @@ async function buildCliScrpts() {
       'chalk',
       'ora',
     ],
-  })
+  });
 }
 
 (async () => {
@@ -43,6 +46,6 @@ async function buildCliScrpts() {
     console.log('\nPlatform Build Complete.\n');
   } catch (e) {
     console.error(e);
-    process.exit(1)
+    process.exit(1);
   }
-})()
+})();
