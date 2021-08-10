@@ -1,6 +1,6 @@
 {
   "name": "@capacitor-community/tauri",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "Capacitor community support for the Tauri platform.",
   "main": "dist/core/index.js",
   "typings": "dist/core/index.d.ts",
@@ -55,5 +55,6 @@
   },
   "bugs": {
     "url": "https://github.com/capacitor-community/tauri/issues"
-  }
+  },
+  "gitHead": "3c01a6c5c8b01dbb3cbe947865e5af99ad11f638"
 }
