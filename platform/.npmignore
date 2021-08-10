@@ -19,3 +19,8 @@ tsconfig.cli-scripts.json
 tsconfig.runtime.json
 changelog.config.js
 template/
+.eslintignore
+.prettierignore
+.prettierrc.js
+.eslintrc.js
+build-platform.js
