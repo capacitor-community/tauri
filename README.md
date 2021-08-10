@@ -16,7 +16,7 @@ Bring your Capacitor ⚡ apps to the desktop with Tauri! 🖥
   <a href="https://npmjs.com/package/@capacitor-community/tauri"><img src="https://img.shields.io/npm/v/@capacitor-community/tauri/next.svg" /></a>
   <a href="https://npmjs.com/package/@capacitor-community/tauri"><img alt="npm" src="https://img.shields.io/npm/dw/@capacitor-community/tauri"></a>
   <a href="https://npmjs.com/package/@capacitor-community/tauri"><img src="https://img.shields.io/npm/l/@capacitor-community/tauri.svg?color=blue" /></a>
-  <a href="https://github.com/capacitor-community/tauri"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/capacitor-community/tauri/CI/next"></a>
+  <a href="https://github.com/capacitor-community/tauri"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/capacitor-community/tauri/CI"></a>
 </p>
 
 ## ⚠ Important Info

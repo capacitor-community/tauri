@@ -3,10 +3,10 @@ name: CI
 on:
   push:
     branches:
-      - "next"
+      - "main"
   pull_request:
     branches:
-      - "next"
+      - "main"
 
 jobs:
   lint-platform:
@@ -14,7 +14,7 @@ jobs:
     timeout-minutes: 30
     defaults:
       run:
-        working-directory: ./packages/electron
+        working-directory: ./packages/tauri
     steps:
       - uses: actions/setup-node@v1
         with:
@@ -28,7 +28,7 @@ jobs:
     timeout-minutes: 30
     defaults:
       run:
-        working-directory: ./packages/electron
+        working-directory: ./packages/tauri
     steps:
       - uses: actions/setup-node@v1
         with:
