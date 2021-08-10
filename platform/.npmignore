@@ -18,3 +18,4 @@ CHANGELOG.md
 tsconfig.cli-scripts.json
 tsconfig.runtime.json
 changelog.config.js
+template/

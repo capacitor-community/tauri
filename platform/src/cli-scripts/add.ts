@@ -1,6 +1,7 @@
-import { existsSync, renameSync } from 'fs';
+import { existsSync, mkdirSync, renameSync } from 'fs';
 import { copySync } from 'fs-extra';
 import { join } from 'path';
+import { extract } from 'tar';
 
 import { readJSON, runExec, writePrettyJSON } from './common';
 
@@ -9,12 +10,12 @@ export async function doAdd(): Promise<void> {
   //console.log(process.env.CAPACITOR_WEB_DIR);
   //console.log(process.env.CAPACITOR_CONFIG);
   const usersProjectDir = process.env.CAPACITOR_ROOT_DIR;
-  const platformNodeModuleTemplateDir = join(
+  const platformNodeModuleTemplateTar = join(
     usersProjectDir,
     'node_modules',
     '@capacitor-community',
     'tauri',
-    'template',
+    'template.tar.gz',
   );
   const destDir = join(usersProjectDir, 'tauri');
   let usersProjectCapConfigFile: string | undefined = undefined;
@@ -39,13 +40,9 @@ export async function doAdd(): Promise<void> {
   const configData = JSON.parse(process.env.CAPACITOR_CONFIG);
 
   if (!existsSync(destDir)) {
-    copySync(platformNodeModuleTemplateDir, destDir);
+    mkdirSync(destDir);
+    await extract({ file: platformNodeModuleTemplateTar, cwd: destDir });
     copySync(usersProjectCapConfigFile, join(destDir, configFileName));
-    // writeFileSync(
-    //   join(destDir, "capacitor.config.json"),
-    //   JSON.stringify(configData)
-    // );
-    renameSync(join(destDir, 'gitignore'), join(destDir, '.gitignore'));
 
     const appName: string = configData.appName;
     const platformPackageJson = readJSON(join(destDir, 'package.json'));
