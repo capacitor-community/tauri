@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.8](https://github.com/capacitor-community/tauri/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2021-08-10)
+
+
+### Features
+
+* template as tarball in releases ([ce3ba64](https://github.com/capacitor-community/tauri/commit/ce3ba64f7feba7f4f3f08d43242ae805aa353b94))
+
+
+
+
+
 # [1.0.0-alpha.7](https://github.com/capacitor-community/tauri/compare/v1.0.0-alpha.6...v1.0.0-alpha.7) (2021-08-10)
 
 **Note:** Version bump only for package capacitor-tauri-platform
