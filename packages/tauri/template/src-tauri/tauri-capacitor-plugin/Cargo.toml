@@ -1,0 +1,10 @@
+[package]
+name = "tauri-capacitor-plugin"
+version = "0.0.1"
+authors = ["Mike Summerfeldt <mike.summerfeldt@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tauri = "1.0.0-beta.5"

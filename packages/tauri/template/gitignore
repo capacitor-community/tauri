@@ -1,0 +1,4 @@
+node_modules
+src-tauri/target
+src-tauri/tauri-capacitor-plugin/target
+src-tauri/WixTools

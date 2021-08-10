@@ -1,0 +1,16 @@
+{
+  "name": "my-tauri-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run tauri dev",
+    "tauri": "tauri"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.0.0-beta.6"
+  }
+}
