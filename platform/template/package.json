@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run tauri dev",
+    "build": "npm run tauri build -- --debug",
     "tauri": "tauri"
   },
   "keywords": [],

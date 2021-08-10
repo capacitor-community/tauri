@@ -1,3 +1,5 @@
+# 🚨 The platform is just into alpha so not everything will "just work" 🚨
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/20338451/128799226-dc84c780-a031-4899-9880-3c9df4c2c52b.png" width="560" /><br />
 </p>
@@ -23,14 +25,13 @@ Bring your Capacitor ⚡ apps to the desktop with Tauri! 🖥
 - Please follow your operating systems guide to setup your environment for Tauri development [here](https://tauri.studio/en/docs/getting-started/intro#setting-up-your-environment)
 - You will need a local build of `@capacitor/core` via `npm link` using this [PR](https://github.com/ionic-team/capacitor/pull/4771) until the PR is merged and published in a release.
 
-## ⏳ Quickstart (super bare bones for now as the platform is just in alpha)
+## ⏳ Quickstart (Functioning on: ✅ Windows, ⬜ MacOS, ⬜ Linux)
 0. Create or open a Capacitor initialized web app project. [CAPACITOR DOCS](https://capacitorjs.com/docs)
-1. `npm i @capacitor-community/tauri@alpha`
-2. `npx cap add @capacitor-community/tauri`
-3. Edit `APP_ROOT/tauri/src-tauri/tauri.conf.json -> build.devPath` to contain the url of you web app when running in dev mode. For example react app runs on `http://localhost:3000`.
-4. Make sure your web app is running. For example, `npm run start` from the `APP_ROOT`
-5. `npx cap open @capacitor-community/tauri`
-6. You now have your web app running in tauri, right click and select `inspect` to bring up dev tools. 
+1. Build your web app (`npm run build` for example)
+2. `npm i @capacitor-community/tauri@alpha`
+3. `npx cap add @capacitor-community/tauri`
+4. `npx cap open @capacitor-community/tauri`
+5. You now have your web app running in tauri, right click and select `inspect` to bring up dev tools. 
 
 ## 🎉 More Info
 - Check out Tauri on its [website](https://tauri.studio/) or on [github](https://github.com/tauri-apps/tauri)

@@ -37,12 +37,12 @@ async function doOpenTask() {
     switch (scriptToRun) {
       case 'add':
         await doAddTask();
+        await doCopyTask();
         // await doUpdateTask();
         break;
       case 'copy':
-        throw new Error(`Invalid script chosen: ${scriptToRun}`);
-      // await doCopyTask();
-      // break;
+        await doCopyTask();
+        break;
       case 'run':
         await doOpenTask();
         break;

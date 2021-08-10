@@ -8,7 +8,7 @@ export async function doCopy(): Promise<void> {
   const usersProjectDir = process.env.CAPACITOR_ROOT_DIR;
   // const configData = JSON.parse(process.env.CAPACITOR_CONFIG!);
   const builtWebAppDir = process.env.CAPACITOR_WEB_DIR;
-  const destDir = join(usersProjectDir, 'electron', 'app');
+  const destDir = join(usersProjectDir, 'tauri', 'app');
 
   try {
     if (existsSync(destDir)) removeSync(destDir);
