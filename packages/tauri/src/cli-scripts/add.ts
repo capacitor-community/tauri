@@ -56,10 +56,15 @@ export async function doAdd(): Promise<void> {
     }
     writePrettyJSON(join(destDir, 'package.json'), platformPackageJson);
 
-    const platformTauriConfigJson = readJSON(join(destDir, 'src-tauri', 'tauri.conf.json'));
+    const platformTauriConfigJson = readJSON(
+      join(destDir, 'src-tauri', 'tauri.conf.json'),
+    );
     platformTauriConfigJson.package.productName = appName;
     platformTauriConfigJson.tauri.windows[0].title = appName;
-    writePrettyJSON(join(destDir, 'src-tauri', 'tauri.conf.json'), platformTauriConfigJson);
+    writePrettyJSON(
+      join(destDir, 'src-tauri', 'tauri.conf.json'),
+      platformTauriConfigJson,
+    );
 
     await runExec(`cd ${destDir} && npm i`);
   } else {

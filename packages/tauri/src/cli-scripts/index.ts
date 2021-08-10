@@ -23,9 +23,12 @@ async function doCopyTask() {
 }
 
 async function doOpenTask() {
-  return await runTask('Opening Tauri platform - The first run of this command can take several minutes to show the app.', async () => {
-    return await doOpen();
-  });
+  return await runTask(
+    'Opening Tauri platform - The first run of this command can take several minutes to show the app.',
+    async () => {
+      return await doOpen();
+    },
+  );
 }
 
 (async () => {
@@ -38,8 +41,8 @@ async function doOpenTask() {
         break;
       case 'copy':
         throw new Error(`Invalid script chosen: ${scriptToRun}`);
-        // await doCopyTask();
-        // break;
+      // await doCopyTask();
+      // break;
       case 'run':
         await doOpenTask();
         break;
@@ -48,13 +51,13 @@ async function doOpenTask() {
         break;
       case 'update':
         throw new Error(`Invalid script chosen: ${scriptToRun}`);
-        // await doUpdateTask();
-        // break;
+      // await doUpdateTask();
+      // break;
       case 'sync':
         throw new Error(`Invalid script chosen: ${scriptToRun}`);
-        // await doCopyTask();
-        // await doUpdateTask();
-        // break;
+      // await doCopyTask();
+      // await doUpdateTask();
+      // break;
       default:
         throw new Error(`Invalid script chosen: ${scriptToRun}`);
     }
