@@ -8,7 +8,7 @@ Bring your Capacitor ⚡ apps to the desktop with Tauri! 🖥
 <p align="center">
   <a href="https://github.com/capacitor-community/tauri"><img src="https://img.shields.io/badge/maintenance%20status-being%20developed-orange" /></a>
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-9-orange" /></a>
+<a href="#-contributors"><img src="https://img.shields.io/badge/all%20contributors-1-orange" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
   <a href="https://www.electronjs.org/releases/stable?version=13"><img src="https://img.shields.io/badge/tauri%20version-v1.0.0--beta.5-blue" /></a>
 </p>
