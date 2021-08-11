@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.10](https://github.com/capacitor-community/tauri/compare/v1.0.0-alpha.9...v1.0.0-alpha.10) (2021-08-11)
+
+
+### Bug Fixes
+
+* more lean npm dist package ([647ea65](https://github.com/capacitor-community/tauri/commit/647ea6555ee7c7507fd728b97da71ae2dd0f628d))
+* open command function on macos ([5407d42](https://github.com/capacitor-community/tauri/commit/5407d425c494be526d76b3c9ba1059403b15b5f1))
+
+
+
+
+
 # [1.0.0-alpha.9](https://github.com/capacitor-community/tauri/compare/v1.0.0-alpha.8...v1.0.0-alpha.9) (2021-08-10)
 
 **Note:** Version bump only for package capacitor-tauri-platform
