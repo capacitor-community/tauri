@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, renameSync } from 'fs';
+import { existsSync, mkdirSync } from 'fs';
 import { copySync } from 'fs-extra';
 import { join } from 'path';
 import { extract } from 'tar';
