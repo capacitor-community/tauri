@@ -8,7 +8,7 @@ export async function doOpen(): Promise<void> {
   const usersProjectDir = process.env.CAPACITOR_ROOT_DIR;
   const destDir = join(usersProjectDir, 'tauri');
   try {
-    const osPlatform = platform()
+    const osPlatform = platform();
     if (osPlatform === 'win32') {
       await runExec(
         `cd ${destDir} && npm run build && cd src-tauri/target/debug && ${configData.appName}.exe`,
@@ -18,7 +18,9 @@ export async function doOpen(): Promise<void> {
         `cd ${destDir} && npm run build && src-tauri/target/debug/${configData.appName}`,
       );
     } else {
-      throw new Error('Sorry but your OS is not supported by the open/run command at this time.')
+      throw new Error(
+        'Sorry but your OS is not supported by the open/run command at this time.',
+      );
     }
   } catch (e) {
     errorLog(e.message);

@@ -17,9 +17,9 @@ Bring your Capacitor ⚡ apps to the desktop with Tauri! 🖥
   <a href="https://www.electronjs.org/releases/stable?version=13"><img src="https://img.shields.io/badge/tauri%20version-v1.0.0--beta.5-blue" /></a>
 </p>
 <p align="center">
-  <a href="https://npmjs.com/package/@capacitor-community/tauri"><img src="https://img.shields.io/npm/v/@capacitor-community/tauri/alpha" /></a>
-  <a href="https://npmjs.com/package/@capacitor-community/tauri"><img alt="npm" src="https://img.shields.io/npm/dw/@capacitor-community/tauri/alpha"></a>
-  <a href="https://npmjs.com/package/@capacitor-community/tauri"><img src="https://img.shields.io/npm/l/@capacitor-community/tauri.svg?color=blue" /></a>
+  <a href="https://npmjs.com/package/@capacitor-community/tauri/v/1.0.0-alpha.9"><img src="https://img.shields.io/npm/v/@capacitor-community/tauri/alpha" /></a>
+  <a href="https://npmjs.com/package/@capacitor-community/tauri/v/1.0.0-alpha.9"><img alt="npm" src="https://img.shields.io/npm/dw/@capacitor-community/tauri/alpha"></a>
+  <a href="https://npmjs.com/package/@capacitor-community/tauri/v/1.0.0-alpha.9"><img src="https://img.shields.io/npm/l/@capacitor-community/tauri.svg?color=blue" /></a>
   <a href="https://github.com/capacitor-community/tauri"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/capacitor-community/tauri/CI"></a>
 </p>
 
@@ -27,7 +27,7 @@ Bring your Capacitor ⚡ apps to the desktop with Tauri! 🖥
 - Please follow your operating systems guide to setup your environment for Tauri development [here](https://tauri.studio/en/docs/getting-started/intro#setting-up-your-environment)
 - You will need a local build of `@capacitor/core` via `npm link` using this [PR](https://github.com/ionic-team/capacitor/pull/4771) until the PR is merged and published in a release.
 
-## ⏳ Quickstart (Functioning on: ✅ Windows, ⬜ MacOS, ⬜ Linux)
+## ⏳ Quickstart (Functioning on: ✅ Windows, ✅ MacOS, ⬜ Linux)
 0. Create or open a Capacitor initialized web app project. [CAPACITOR DOCS](https://capacitorjs.com/docs)
 1. Build your web app (`npm run build` for example)
 2. `npm i @capacitor-community/tauri@alpha`
