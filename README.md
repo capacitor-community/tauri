@@ -25,7 +25,7 @@ Bring your Capacitor ⚡ apps to the desktop with Tauri! 🖥
 
 ## ⚠ Important Info
 - Please follow your operating systems guide to setup your environment for Tauri development [here](https://tauri.studio/en/docs/getting-started/intro#setting-up-your-environment)
-- You will need a local build of `@capacitor/core` via `npm link` using this [PR](https://github.com/ionic-team/capacitor/pull/4771) until the PR is merged and published in a release.
+- You will need a local build of the `@capacitor/core` via `npm link` using the [repo](https://github.com/ionic-team/capacitor) until `3.2.0`+ is released.
 
 ## ⏳ Quickstart (Functioning on: ✅ Windows, ✅ MacOS, ⬜ Linux)
 0. Create or open a Capacitor initialized web app project. [CAPACITOR DOCS](https://capacitorjs.com/docs)
