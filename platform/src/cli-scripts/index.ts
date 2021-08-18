@@ -1,32 +1,36 @@
+import { join } from 'path';
+
 import { doAdd } from './add';
-import { runTask } from './common';
+import { runExecWithInput, runTask } from './common';
 import { doCopy } from './copy';
 import { doOpen } from './open';
-import { doUpdate } from './update';
+// import { doUpdate } from './update';
 
+/*
 async function doUpdateTask() {
-  return await runTask('Updating Tauri plugins', async () => {
+  return await runTask('Updating Tauri plugins', async taskInfoMessageProvider => {
     return await doUpdate();
   });
 }
+*/
 
 async function doAddTask() {
-  return await runTask('Adding Tauri platform', async () => {
-    return doAdd();
+  return await runTask('Adding Tauri platform', async taskInfoMessageProvider => {
+    return doAdd(taskInfoMessageProvider);
   });
 }
 
 async function doCopyTask() {
-  return await runTask('Copying Web App to Tauri platform', async () => {
-    return await doCopy();
+  return await runTask('Copying Web App to Tauri platform', async taskInfoMessageProvider => {
+    return await doCopy(taskInfoMessageProvider);
   });
 }
 
 async function doOpenTask() {
   return await runTask(
-    'Opening Tauri platform - The first run of this command can take several minutes to show the app.',
-    async () => {
-      return await doOpen();
+    'Opening Tauri platform',
+    async taskInfoMessageProvider => {
+      return await doOpen(taskInfoMessageProvider);
     },
   );
 }
@@ -37,6 +41,7 @@ async function doOpenTask() {
     switch (scriptToRun) {
       case 'add':
         await doAddTask();
+        await runExecWithInput(`cd ${join(process.env.CAPACITOR_ROOT_DIR, 'tauri')} && npm run update-deps`)
         await doCopyTask();
         // await doUpdateTask();
         break;

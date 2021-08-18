@@ -3,9 +3,13 @@ import { copySync } from 'fs-extra';
 import { join } from 'path';
 import { extract } from 'tar';
 
-import { readJSON, runExec, writePrettyJSON } from './common';
+import type { TaskInfoProvider } from './common';
+import { runExecWithInput , readJSON, runExec, writePrettyJSON } from './common';
 
-export async function doAdd(): Promise<void> {
+
+export async function doAdd(
+  taskInfoMessageProvider: TaskInfoProvider,
+): Promise<void> {
   //console.log(process.env.CAPACITOR_ROOT_DIR);
   //console.log(process.env.CAPACITOR_WEB_DIR);
   //console.log(process.env.CAPACITOR_CONFIG);
@@ -41,7 +45,9 @@ export async function doAdd(): Promise<void> {
 
   if (!existsSync(destDir)) {
     mkdirSync(destDir);
+    taskInfoMessageProvider(`extracting template`);
     await extract({ file: platformNodeModuleTemplateTar, cwd: destDir });
+    taskInfoMessageProvider(`copying capacitor config file`);
     copySync(usersProjectCapConfigFile, join(destDir, configFileName));
 
     const appName: string = configData.appName;
@@ -51,6 +57,7 @@ export async function doAdd(): Promise<void> {
     if (rootPackageJson.repository) {
       platformPackageJson.repository = rootPackageJson.repository;
     }
+    taskInfoMessageProvider(`setting up tauri project`);
     writePrettyJSON(join(destDir, 'package.json'), platformPackageJson);
 
     const platformTauriConfigJson = readJSON(
@@ -63,7 +70,10 @@ export async function doAdd(): Promise<void> {
       platformTauriConfigJson,
     );
 
+    taskInfoMessageProvider(`installing npm modules`);
     await runExec(`cd ${destDir} && npm i`);
+    taskInfoMessageProvider(`installing @tauri-apps/cli@latest`);
+    await runExec(`cd ${destDir} && npm i @tauri-apps/cli@latest`);
   } else {
     throw new Error('Tauri platform already exists.');
   }
