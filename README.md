@@ -52,7 +52,7 @@ Bring your Capacitor ⚡ apps to the desktop with Tauri! 🖥
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/IT-MikeS"><img src="https://avatars0.githubusercontent.com/u/20338451?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Mike S</b></sub></a><br /><a href="https://github.com/capacitor-community/tauri/commits?author=IT-MikeS" title="Code">💻</a> <a href="https://github.com/capacitor-community/tauri/commits?author=IT-MikeS" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/IT-MikeS"><img src="https://avatars0.githubusercontent.com/u/20338451?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Mike Summerfeldt</b></sub></a><br /><a href="https://github.com/capacitor-community/tauri/commits?author=IT-MikeS" title="Code">💻</a> <a href="https://github.com/capacitor-community/tauri/commits?author=IT-MikeS" title="Documentation">📖</a></td>
   </tr>
 </table>
 
