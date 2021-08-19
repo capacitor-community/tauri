@@ -3,7 +3,7 @@
 </h1>
   
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/20338451/128799226-dc84c780-a031-4899-9880-3c9df4c2c52b.png" width="560" /><br />
+  <img src="https://user-images.githubusercontent.com/20338451/129942856-bac5a858-a846-4a9f-b10e-10c423917471.png" width="560" /><br />
 </p>
 
 <p align="center">
@@ -14,7 +14,7 @@ Bring your Capacitor ⚡ apps to the desktop with Tauri! 🖥
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 <a href="#-contributors"><img src="https://img.shields.io/badge/all%20contributors-1-orange" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-  <a href="https://www.electronjs.org/releases/stable?version=13"><img src="https://img.shields.io/badge/tauri%20version-v1.0.0--beta.5-blue" /></a>
+  <a href="https://www.electronjs.org/releases/stable?version=13"><img src="https://img.shields.io/badge/tauri%20version-v1.0.0--beta.x-blue" /></a>
 </p>
 <p align="center">
   <a href="https://npmjs.com/package/@capacitor-community/tauri/v/1.0.0-alpha.9"><img src="https://img.shields.io/npm/v/@capacitor-community/tauri/alpha" /></a>
@@ -25,7 +25,7 @@ Bring your Capacitor ⚡ apps to the desktop with Tauri! 🖥
 
 ## ⚠ Important Info
 - Please follow your operating systems guide to setup your environment for Tauri development [here](https://tauri.studio/en/docs/getting-started/intro#setting-up-your-environment)
-- You will need a local build of `@capacitor/core` via `npm link` using this [PR](https://github.com/ionic-team/capacitor/pull/4771) until the PR is merged and published in a release.
+- You will need `@capacitor/core` version `>= 3.2.0`.
 
 ## ⏳ Quickstart (Functioning on: ✅ Windows, ✅ MacOS, ⬜ Linux)
 0. Create or open a Capacitor initialized web app project. [CAPACITOR DOCS](https://capacitorjs.com/docs)
@@ -52,7 +52,7 @@ Bring your Capacitor ⚡ apps to the desktop with Tauri! 🖥
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/IT-MikeS"><img src="https://avatars0.githubusercontent.com/u/20338451?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Mike S</b></sub></a><br /><a href="https://github.com/capacitor-community/tauri/commits?author=IT-MikeS" title="Code">💻</a> <a href="https://github.com/capacitor-community/tauri/commits?author=IT-MikeS" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/IT-MikeS"><img src="https://avatars0.githubusercontent.com/u/20338451?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Mike Summerfeldt</b></sub></a><br /><a href="https://github.com/capacitor-community/tauri/commits?author=IT-MikeS" title="Code">💻</a> <a href="https://github.com/capacitor-community/tauri/commits?author=IT-MikeS" title="Documentation">📖</a></td>
   </tr>
 </table>
 
