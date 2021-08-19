@@ -1,18 +1,20 @@
+import chalk from 'chalk';
 import { existsSync, mkdirSync } from 'fs';
 import { copySync } from 'fs-extra';
 import { join } from 'path';
 import { extract } from 'tar';
 
-import type { TaskInfoProvider } from './common';
-import { runExecWithInput , readJSON, runExec, writePrettyJSON } from './common';
+import {
+  log,
+  runExecWithInput,
+  readJSON,
+  writePrettyJSON,
+  formatHrTime,
+} from './common';
 
-
-export async function doAdd(
-  taskInfoMessageProvider: TaskInfoProvider,
-): Promise<void> {
-  //console.log(process.env.CAPACITOR_ROOT_DIR);
-  //console.log(process.env.CAPACITOR_WEB_DIR);
-  //console.log(process.env.CAPACITOR_CONFIG);
+export async function doAdd(): Promise<void> {
+  const start = process.hrtime();
+  log(`\n${chalk.bold('Tauri Platform:')} Starting add task 🚀`);
   const usersProjectDir = process.env.CAPACITOR_ROOT_DIR;
   const platformNodeModuleTemplateTar = join(
     usersProjectDir,
@@ -45,9 +47,9 @@ export async function doAdd(
 
   if (!existsSync(destDir)) {
     mkdirSync(destDir);
-    taskInfoMessageProvider(`extracting template`);
+    log(`\n${chalk.bold('Tauri Platform:')} Unpacking template files 📦`);
     await extract({ file: platformNodeModuleTemplateTar, cwd: destDir });
-    taskInfoMessageProvider(`copying capacitor config file`);
+    log(`\n${chalk.bold('Tauri Platform:')} Copying Capacitor config file ⚙`);
     copySync(usersProjectCapConfigFile, join(destDir, configFileName));
 
     const appName: string = configData.appName;
@@ -57,7 +59,7 @@ export async function doAdd(
     if (rootPackageJson.repository) {
       platformPackageJson.repository = rootPackageJson.repository;
     }
-    taskInfoMessageProvider(`setting up tauri project`);
+    log(`\n${chalk.bold('Tauri Platform:')} Setting up Tauri project files 📋`);
     writePrettyJSON(join(destDir, 'package.json'), platformPackageJson);
 
     const platformTauriConfigJson = readJSON(
@@ -70,10 +72,18 @@ export async function doAdd(
       platformTauriConfigJson,
     );
 
-    taskInfoMessageProvider(`installing npm modules`);
-    await runExec(`cd ${destDir} && npm i`);
-    taskInfoMessageProvider(`installing @tauri-apps/cli@latest`);
-    await runExec(`cd ${destDir} && npm i @tauri-apps/cli@latest`);
+    log(`\n${chalk.bold('Tauri Platform:')} Installing npm modules ⏳`);
+    await runExecWithInput(`cd ${destDir} && npm i`);
+    log(`\n${chalk.bold('Tauri Platform:')} Updating Tauri CLI 🌟`);
+    await runExecWithInput(`cd ${destDir} && npm i @tauri-apps/cli@latest`);
+    log(`\n${chalk.bold('Tauri Platform:')} Updating Tauri dependancies 🛠`);
+    await runExecWithInput(`cd ${destDir} && npm run update-deps`);
+    const elapsed = process.hrtime(start);
+    log(
+      `\n${chalk.bold('Tauri Platform:')} Add task complete ✅ - ${formatHrTime(
+        elapsed,
+      )}\n`,
+    );
   } else {
     throw new Error('Tauri platform already exists.');
   }

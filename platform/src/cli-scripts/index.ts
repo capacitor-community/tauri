@@ -1,38 +1,24 @@
-import { join } from 'path';
-
 import { doAdd } from './add';
-import { runExecWithInput, runTask } from './common';
 import { doCopy } from './copy';
 import { doOpen } from './open';
 // import { doUpdate } from './update';
 
 /*
 async function doUpdateTask() {
-  return await runTask('Updating Tauri plugins', async taskInfoMessageProvider => {
-    return await doUpdate();
-  });
+  return await doUpdate();
 }
 */
 
 async function doAddTask() {
-  return await runTask('Adding Tauri platform', async taskInfoMessageProvider => {
-    return doAdd(taskInfoMessageProvider);
-  });
+  return await doAdd();
 }
 
 async function doCopyTask() {
-  return await runTask('Copying Web App to Tauri platform', async taskInfoMessageProvider => {
-    return await doCopy(taskInfoMessageProvider);
-  });
+  return await doCopy();
 }
 
 async function doOpenTask() {
-  return await runTask(
-    'Opening Tauri platform',
-    async taskInfoMessageProvider => {
-      return await doOpen(taskInfoMessageProvider);
-    },
-  );
+  return await doOpen();
 }
 
 (async () => {
@@ -41,7 +27,6 @@ async function doOpenTask() {
     switch (scriptToRun) {
       case 'add':
         await doAddTask();
-        await runExecWithInput(`cd ${join(process.env.CAPACITOR_ROOT_DIR, 'tauri')} && npm run update-deps`)
         await doCopyTask();
         // await doUpdateTask();
         break;
@@ -49,8 +34,6 @@ async function doOpenTask() {
         await doCopyTask();
         break;
       case 'run':
-        await doOpenTask();
-        break;
       case 'open':
         await doOpenTask();
         break;
