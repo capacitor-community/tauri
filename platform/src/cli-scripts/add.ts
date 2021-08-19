@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 import { existsSync, mkdirSync } from 'fs';
 import { copySync } from 'fs-extra';
-import { join } from 'path';
+import path from 'path';
 import { extract } from 'tar';
 
 import {
@@ -12,10 +12,16 @@ import {
   formatHrTime,
 } from './common';
 
+const relative = path.relative;
+const join = path.join;
+const sep = path.sep;
+const posixSep = path.posix.sep;
+
 export async function doAdd(): Promise<void> {
   const start = process.hrtime();
   log(`\n${chalk.bold('Tauri Platform:')} Starting add task 🚀`);
   const usersProjectDir = process.env.CAPACITOR_ROOT_DIR;
+  const builtWebAppDir = process.env.CAPACITOR_WEB_DIR;
   const platformNodeModuleTemplateTar = join(
     usersProjectDir,
     'node_modules',
@@ -62,11 +68,18 @@ export async function doAdd(): Promise<void> {
     log(`\n${chalk.bold('Tauri Platform:')} Setting up Tauri project files 📋`);
     writePrettyJSON(join(destDir, 'package.json'), platformPackageJson);
 
+    const srcTauriPath = join(destDir, 'src-tauri');
     const platformTauriConfigJson = readJSON(
-      join(destDir, 'src-tauri', 'tauri.conf.json'),
+      join(srcTauriPath, 'tauri.conf.json'),
     );
     platformTauriConfigJson.package.productName = appName;
     platformTauriConfigJson.tauri.windows[0].title = appName;
+    platformTauriConfigJson.build.distDir = relative(
+      srcTauriPath,
+      builtWebAppDir,
+    )
+      .split(sep)
+      .join(posixSep);
     writePrettyJSON(
       join(destDir, 'src-tauri', 'tauri.conf.json'),
       platformTauriConfigJson,
