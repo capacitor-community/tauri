@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.11](https://github.com/capacitor-community/tauri/compare/v1.0.0-alpha.10...v1.0.0-alpha.11) (2021-08-19)
+
+
+### Features
+
+* cli hooks more clear for better DX ([2b69add](https://github.com/capacitor-community/tauri/commit/2b69add17349a089e57cca0cec2f8a9c51534090))
+* more cli improvements ([99866fe](https://github.com/capacitor-community/tauri/commit/99866fe0f9925c64a9b25693e754ed7d2b72291c))
+* no need for copy cli script, use web app build dir ([891f9ec](https://github.com/capacitor-community/tauri/commit/891f9ec6beb34b194632d2edbf4e4a49547b1cb4))
+
+
+
+
+
+
 # [1.0.0-alpha.10](https://github.com/capacitor-community/tauri/compare/v1.0.0-alpha.9...v1.0.0-alpha.10) (2021-08-11)
 
 
