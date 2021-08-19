@@ -14,12 +14,12 @@ Bring your Capacitor ⚡ apps to the desktop with Tauri! 🖥
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 <a href="#-contributors"><img src="https://img.shields.io/badge/all%20contributors-1-orange" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-  <a href="https://www.electronjs.org/releases/stable?version=13"><img src="https://img.shields.io/badge/tauri%20version-v1.0.0--beta.x-blue" /></a>
+  <a href="https://github.com/tauri-apps/tauri/releases"><img src="https://img.shields.io/badge/tauri%20version-v1.0.0--beta.x-blue" /></a>
 </p>
 <p align="center">
-  <a href="https://npmjs.com/package/@capacitor-community/tauri/v/1.0.0-alpha.9"><img src="https://img.shields.io/npm/v/@capacitor-community/tauri/alpha" /></a>
-  <a href="https://npmjs.com/package/@capacitor-community/tauri/v/1.0.0-alpha.9"><img alt="npm" src="https://img.shields.io/npm/dw/@capacitor-community/tauri/alpha"></a>
-  <a href="https://npmjs.com/package/@capacitor-community/tauri/v/1.0.0-alpha.9"><img src="https://img.shields.io/npm/l/@capacitor-community/tauri.svg?color=blue" /></a>
+  <a href="https://npmjs.com/package/@capacitor-community/tauri/v/1.0.0-alpha.12"><img src="https://img.shields.io/npm/v/@capacitor-community/tauri/alpha" /></a>
+  <a href="https://npmjs.com/package/@capacitor-community/tauri/v/1.0.0-alpha.12"><img alt="npm" src="https://img.shields.io/npm/dw/@capacitor-community/tauri/alpha"></a>
+  <a href="https://npmjs.com/package/@capacitor-community/tauri/v/1.0.0-alpha.12"><img src="https://img.shields.io/npm/l/@capacitor-community/tauri.svg?color=blue" /></a>
   <a href="https://github.com/capacitor-community/tauri"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/capacitor-community/tauri/CI"></a>
 </p>
 
