@@ -1,6 +1,6 @@
 {
   "name": "@capacitor-community/tauri",
-  "version": "1.0.0-alpha.11",
+  "version": "1.0.0-alpha.12",
   "description": "Capacitor community support for the Tauri platform.",
   "main": "dist/core/index.js",
   "typings": "dist/core/index.d.ts",
