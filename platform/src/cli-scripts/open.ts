@@ -34,6 +34,11 @@ export async function doOpen(): Promise<void> {
     await runExecWithInput(
       `cd ${destDir} && src-tauri/target/debug/${configData.appName}`,
     );
+  } else if (osPlatform === 'linux') {
+    log(`\n${chalk.bold('Tauri Platform:')} Running linux app ⚡\n`);
+    await runExecWithInput(
+      `cd ${destDir} && src-tauri/target/debug/${configData.appName}`,
+    );
   } else {
     throw new Error(
       'Sorry but your OS is not supported by the open/run command at this time.',
